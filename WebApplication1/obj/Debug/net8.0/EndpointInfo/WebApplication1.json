@@ -1,0 +1,193 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApplication1",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/CabinetSchedule": {
+      "get": {
+        "tags": [
+          "CabinetSchedule"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GroupSchedule": {
+      "get": {
+        "tags": [
+          "GroupSchedule"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TeacherSchedule": {
+      "get": {
+        "tags": [
+          "TeacherSchedule"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PairDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PairDto": {
+        "type": "object",
+        "properties": {
+          "idPair": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idTeacher": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idCabinet": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idGroup": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idDay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idTypeLesson": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSubject": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSheduleNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "teacherName": {
+            "type": "string",
+            "nullable": true
+          },
+          "cabinetName": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dayWeek": {
+            "type": "string",
+            "nullable": true
+          },
+          "subjectName": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeLessonName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sheduleNumber": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
